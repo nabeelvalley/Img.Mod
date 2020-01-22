@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Img.Mod.Console", "Img.Mod.Console\Img.Mod.Console.fsproj", "{D4E53604-5627-465D-8D25-4F585A6EF6FC}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Img.Mod.Lib", "Img.Mod.Lib\Img.Mod.Lib.fsproj", "{62AAD8E6-0D73-490E-8EC9-D58A1BEA5DFD}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4E53604-5627-465D-8D25-4F585A6EF6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E53604-5627-465D-8D25-4F585A6EF6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E53604-5627-465D-8D25-4F585A6EF6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E53604-5627-465D-8D25-4F585A6EF6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62AAD8E6-0D73-490E-8EC9-D58A1BEA5DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62AAD8E6-0D73-490E-8EC9-D58A1BEA5DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62AAD8E6-0D73-490E-8EC9-D58A1BEA5DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62AAD8E6-0D73-490E-8EC9-D58A1BEA5DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
