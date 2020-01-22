@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="File.fs" />
+    <Compile Include="FileHandler.fs" />
+    <Compile Include="ImageResize.fs" />
   </ItemGroup>
 
   <ItemGroup>
