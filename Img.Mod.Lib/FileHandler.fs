@@ -6,6 +6,7 @@ open SixLabors.ImageSharp.PixelFormats
 open System.IO
 
 module FileHandler =
+    
     let GetBytesFromUrl url =
         async {
             printfn "Fetching %s" url
@@ -27,9 +28,8 @@ module FileHandler =
 
     let GetBytesFromImage (image: Image<Rgba32>) =
         let memoryStream = new MemoryStream()
-        image.SaveAsPng(memoryStream)
 
-        image.SaveAsJpeg(memoryStream)  
+        image.SaveAsPng(memoryStream)
         
         memoryStream.ToArray()
 

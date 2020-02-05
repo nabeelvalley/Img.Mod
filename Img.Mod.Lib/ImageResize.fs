@@ -3,31 +3,28 @@
 open FileHandler
 open SixLabors.ImageSharp
 open SixLabors.ImageSharp.Processing
+open SixLabors.ImageSharp.PixelFormats
 
 module ImageResize =
 
-    let ResizeImageByWidth (url, width) =
+    let ResizeImageByWidth width (image: Image<Rgba32>) =
         async {
-            use! image = GetImageFromUrl url
-
             let mutateAction (img:IImageProcessingContext) = 
                 img.Resize(width, 0) |> ignore
 
             image.Mutate(mutateAction)
 
-            return GetBytesFromImage image
+            return image
         }
         
 
-    let ResizeImageByHeight (url, height) =
+    let ResizeImageByHeight height (image: Image<Rgba32>)  =
         async {
-            use! image = GetImageFromUrl url
-
             let mutateAction (img:IImageProcessingContext) = 
                 img.Resize(0, height) |> ignore
 
             image.Mutate(mutateAction)
 
-            return GetBytesFromImage image   
+            return image   
         }
     
