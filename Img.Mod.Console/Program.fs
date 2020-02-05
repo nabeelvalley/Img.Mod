@@ -10,10 +10,10 @@ let main argv =
 
     printfn "Location: %s" outputLocation
 
-    let image = FileHandler.GetImageFromUrl url
+    use image = FileHandler.GetImageFromUrl url
                 |> Async.RunSynchronously
 
-    FileHandler.SaveAndDispose(image, outputLocation)
+    FileHandler.Save(image, outputLocation)
 
     0
         

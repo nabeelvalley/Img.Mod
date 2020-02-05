@@ -9,7 +9,7 @@ module FileHandler =
     let GetBytesFromUrl url =
         async {
             printfn "Fetching %s" url
-            let client = new HttpClient()
+            use client = new HttpClient()
 
             let! res = client.GetAsync url
                        |> Async.AwaitTask
@@ -40,6 +40,6 @@ module FileHandler =
                    |> GetImageFromBytes
         }
 
-    let SaveAndDispose (image:Image<Rgba32>, path) = 
+    let Save (image:Image<Rgba32>, path) = 
         image.Save(path)
         printf("Image saved")
